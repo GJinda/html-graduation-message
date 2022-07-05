@@ -32,6 +32,19 @@
       align-items: center;
       flex-direction: column;
       border-radius: 10px;
+      overflow-y: scroll;
+    }
+
+    .msg-box::-webkit-scrollbar {
+      display: none;
+    }
+
+    @media (max-width: 400px) {
+      .msg-box {
+        width: calc(100vw - 60px);
+        height: calc(100vh - 60px);
+        padding: 30px;
+      }
     }
 
     .msg-box>p,
@@ -41,6 +54,12 @@
       font-size: 20px;
       text-align: center;
       transition: 0.15s ease;
+    }
+
+    @media (max-width: 400px) {
+      .msg-box>p {
+        font-size: 18px;
+      }
     }
 
     .msg-box>button {
@@ -53,6 +72,15 @@
       box-shadow: 0 5px 10px #0000000f;
       border-radius: 10px;
       cursor: pointer;
+    }
+
+    @media (max-width: 400px) {
+      .msg-box>button {
+        width: 90px;
+        height: 45px;
+        line-height: 45px;
+        font-size: 18px;
+      }
     }
 
     .msg-box>button:hover {
